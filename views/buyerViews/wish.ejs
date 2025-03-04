@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1005773256151810078/1346366087343767583/1000x983.png?ex=67c7eca1&is=67c69b21&hm=9989ad43e159e25c8a2dae9c8067c054630819b826a6f64e17663c33623fea95&" type="image/icon type">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 bg-gradient-to-r to-[#101820FF] from-[#F2AA4CFF]">
+
+    <!-- Success/Error -->
+    <% if (success && success.length>0) { %>
+        <div class="bg-green-500 text-white text-center py-3 rounded-md mb-4">
+            <%= success %>
+        </div>
+    <% } %>
+
+    <% if (error && error.length>0) { %>
+        <div class="bg-red-500 text-white text-center py-3 rounded-md mb-4">
+            <%= error %>
+        </div>
+    <% } %>
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-r to-[#101820FF] from-[#F2AA4CFF] p-4 flex shadow-md justify-between items-center">        
+        <div class="flex-1 text-center">
+            <div class="inline-block drop-shadow-md text-3xl font-bold text-gray-800 hover:text-[#ff9d00] hover:scale-105 transition duration-300 cursor-pointer">
+                <a href="/">RM Shopping Hub</a>
+            </div>
+        </div>
+
+        <div class="ml-4">
+            <a href="/buyers/logout">
+                <button class="bg-red-500 text-white px-8 py-3 rounded-full hover:bg-red-600 transition duration-300 transform hover:scale-105">
+                    Logout
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <div class="p-4 mt-6 mx-6">
+        <a href="/buyers/home" class="bg-gray-500 text-white px-6 py-3 rounded-full hover:bg-gray-600 transition duration-300 transform hover:scale-105">
+            Go Back
+        </a>
+    </div>
+
+    <div class="flex justify-between items-center bg-transparent p-6 mt-6 mx-6 rounded-lg">
+        <span class="text-5xl font-extrabold text-gray-800">Hello <%= buyer.name %></span>
+        
+    </div>
+
+    <div class="flex justify-center items-center bg-transparent p-6 mt-6 mx-6 rounded-lg">
+        <span class="text-4xl font-bold text-gray-700">Your Wishist</span>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-6 mx-6">
+        <% buyer.wishlist.forEach(function(prod) { %>
+            <a href="/buyers/products/<%= prod._id %>" class="bg-white rounded-lg shadow-md transform hover:scale-105 hover:shadow-2xl transition duration-300">
+                <div>
+                    <img src="data:image/jpeg;base64,<%= prod.image.toString('base64') %>" alt="Product Image" class="w-full h-48 object-cover rounded-t-lg">
+                    <div class="mt-4 ml-3 mb-3">
+                        <h3 class="text-xl font-semibold text-gray-800"><%= prod.name %></h3>
+                        <p class="text-gray-600 mt-2">Price : $<%= prod.price %></p>
+                        <p class="text-gray-600 mt-2">Discount : <%= prod.discount %>%</p>
+                        <div class="mt-4">
+                            <span class="text-lg font-bold text-gray-800">Selling Price : $<%= (prod.price - ((prod.price * prod.discount) / 100)).toFixed(2) %></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        <% }) %>
+    </div>
+    
+</body>
+</html>

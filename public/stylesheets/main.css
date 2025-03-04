@@ -1,0 +1,70 @@
+/* Horizontal Scroll Animation */
+@keyframes scroll-products {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-70%);
+    }
+}
+
+.scrolling-products {
+    display: flex;
+    gap: 50px;
+    animation: scroll-products 10s linear infinite; /* Infinite loop added */
+}
+
+/* Navbar background customization */
+nav {
+    background: linear-gradient(to right, #fcb9d4, #ffffff, #81c8a1); /* Lighter pink to white to darker green */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .scrolling-products {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .scrolling-products img {
+        max-width: 100%;
+    }
+}
+
+/* Main CSS file */
+
+/* Styling for the Image Container */
+.image-container {
+    position: relative;
+}
+
+/* Styling for the Hover Text Overlay */
+.image-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden;
+}
+
+/* Display overlay text on hover */
+.image-container:hover .overlay {
+    opacity: 1; /* Make the overlay visible on hover */
+}

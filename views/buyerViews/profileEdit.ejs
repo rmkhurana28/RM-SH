@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Credentials</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1005773256151810078/1346366087343767583/1000x983.png?ex=67c7eca1&is=67c69b21&hm=9989ad43e159e25c8a2dae9c8067c054630819b826a6f64e17663c33623fea95&" type="image/icon type">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 bg-gradient-to-l from-[#C7D3D4FF] to-[#603F83FF]">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-l from-[#C7D3D4FF] to-[#603F83FF] p-4 flex shadow-md justify-between items-center">
+        <div class="flex items-center">
+            <img src="company_logo.png" alt="Company Logo" class="w-12 h-auto mr-4">
+        </div>
+
+        <div class="flex-1 text-center">
+            <div class="inline-block text-3xl drop-shadow-md font-bold text-gray-800 hover:text-[#8E24AA] hover:scale-105 transition duration-300 cursor-pointer">
+                <a href="/">RM Shopping Hub</a>
+            </div>
+        </div>
+
+        <div class="ml-4">
+            <a href="/buyers/logout">
+                <button class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-400 transition duration-300 transform hover:scale-105">
+                    Logout
+                </button>
+            </a>
+        </div>
+    </nav>
+
+    <div class="max-w-lg mx-auto p-8 bg-[#f4f4f4] mt-10 rounded-2xl shadow-2xl">
+        <h2 class="text-3xl font-semibold text-center text-gray-700 mb-6">Update Credentials</h2>
+
+        <form action="/buyers/profile/edit" method="POST" enctype="multipart/form-data">
+            <div class="mb-6">
+                <label for="name" class="block text-lg font-medium text-gray-800">Full Name</label>
+                <input type="text" id="name" name="name" class="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9C27B0]" placeholder="Enter your name" required>
+            </div>                        
+
+            <div class="mb-6">
+                <label for="profile_picture" class="block text-lg font-medium text-gray-800">Profile Picture</label>
+                <input type="file" id="profile_pic" name="profile_pic" class="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#9C27B0]" accept="image/*" required>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="bg-[#9C27B0] text-white px-8 py-3 rounded-lg w-full mt-4 hover:bg-[#8E24AA] transition duration-300 transform hover:scale-105">Update</button>
+            </div>
+
+            <div class="text-center mt-6 hover:scale-105 ">
+                <a href="/buyers/profile" class="bg-gray-300 text-gray-800 px-6 py-2 rounded-full hover:bg-gray-400 hover:scale-105 transition duration-300 transform hover:scale-105">
+                    Go Back
+                </a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

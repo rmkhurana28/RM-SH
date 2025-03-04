@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1005773256151810078/1346366087343767583/1000x983.png?ex=67c7eca1&is=67c69b21&hm=9989ad43e159e25c8a2dae9c8067c054630819b826a6f64e17663c33623fea95&" type="image/icon type">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 bg-gradient-to-l from-[#66BB6A] to-white">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-l from-[#66BB6A] to-white p-4 flex shadow-md justify-between items-center">        
+        <div class="flex-1 text-center">
+            <div class="inline-block text-3xl drop-shadow-md font-bold text-gray-800 hover:text-[#4CAF50] hover:scale-105 transition duration-300 cursor-pointer">
+                <a href="/">RM Shopping Hub</a>
+            </div>
+        </div>
+
+        <div class="ml-4">
+            <button onclick="window.location.href='/sellers/logout'" class="bg-red-600 text-white px-4 py-2 rounded-full hover:bg-red-700 hover:scale-105 transform transition duration-300 text-sm">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Success/Error -->
+    <div class="max-w-lg mx-auto mt-6">
+        <% if (success && success.length > 0) { %>
+            <div class="text-green-700 bg-green-100 p-4 rounded-lg mb-4 text-center">
+                <p><%= success %></p>
+            </div>
+        <% } %>
+
+        <% if (error && error.length > 0) { %>
+            <div class="text-red-700 bg-red-100 p-4 rounded-lg mb-4 text-center">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Seller Profile -->
+    <div class="flex rounded-lg shadow-lg hover:shadow-2xl transition duration-300 w-2/3 mx-auto mt-8 h-80">
+    
+        <div class="w-1/3 bg-transparent relative mr-8 rounded-lg overflow-hidden flex justify-center items-center h-full">
+            <img src="data:image/jpeg;base64,<%= seller.profile_pic.toString('base64') %>" alt="Profile Picture" class="w-full h-full object-cover rounded-lg">
+        </div>
+
+        <div class="w-2/3 p-6 flex flex-col justify-between bg-white rounded-lg h-full">
+            <div class="flex flex-col space-y-4">
+                <span class="text-4xl font-semibold text-gray-800">Name: <%= seller.name %></span>
+                <span class="text-sm text-gray-600">Email: <%= seller.email %></span>
+                <span class="text-sm text-gray-600">SSN: <%= seller.ssn %></span>
+            </div>
+        
+            <button onclick="window.location.href='/sellers/profile/edit'" class="self-end bg-yellow-400 text-black px-4 py-2 rounded-full hover:bg-yellow-500 hover:scale-105 transform transition duration-300 text-sm">
+                Edit Profile
+            </button>
+        </div>
+    </div>
+
+
+
+    <!-- My Products Section -->
+    <div class="w-full ml-4 mr-5 mt-16 p-10">
+        <div class="flex justify-between items-center mb-6">        
+            <h2 class="text-3xl font-semibold text-left text-gray-800">My Products</h2>                    
+            <button onclick="window.location.href='/sellers/sell'" class="bg-blue-600 text-white px-5 py-3 rounded-full hover:bg-blue-700 hover:scale-105 transition duration-300 text-2xl">
+               + Sell a Product
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <% seller.products.forEach(function(prod) { %>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="data:image/jpeg;base64,<%= prod.image.toString('base64') %>" alt="Product 1" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-xl font-semibold text-gray-800">Name : <%= prod.name %></h3>
+                            <button onclick="window.location.href='/sellers/products/<%= prod._id %>'" class="bg-yellow-400 text-black px-4 py-2 rounded-full hover:bg-yellow-500 transition hover:scale-105 duration-300">
+                                Manage
+                            </button>
+                        </div>
+                        <p class="text-gray-600 mt-2">Price : $ <%= prod.price %></p>
+                        <p class="text-gray-600 mt-2">Discount : <%= prod.discount %>%</p>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </div>
+
+</body>
+</html>

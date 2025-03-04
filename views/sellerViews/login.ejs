@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="https://cdn.discordapp.com/attachments/1005773256151810078/1346366087343767583/1000x983.png?ex=67c7eca1&is=67c69b21&hm=9989ad43e159e25c8a2dae9c8067c054630819b826a6f64e17663c33623fea95&" type="image/icon type">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-purple-100 bg-gradient-to-l to-[#101820FF] from-[#F2AA4CFF]">
+
+    <!-- Navbar -->
+    <nav class="bg-gradient-to-l to-[#101820FF] from-[#F2AA4CFF] p-4 flex shadow-md justify-between items-center">
+        <div class="flex-1 text-center">
+            <div class="inline-block text-3xl drop-shadow-md font-bold text-white hover:text-gray-200 hover:scale-105 transition duration-300 cursor-pointer">
+                <a href="/">RM Shopping Hub</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Error/Success -->
+    <div class="max-w-lg mx-auto mt-6">
+        <% if (success && success.length>0) { %>
+            <div class="bg-green-200 text-green-900 text-center p-4 rounded-lg mb-4 font-semibold">
+                <p><%= success %></p>
+            </div>
+        <% } %>
+
+        <% if (error && error.length>0) { %>
+            <div class="bg-red-200 text-red-900 text-center p-4 rounded-lg mb-4 font-semibold">
+                <p><%= error %></p>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Login -->
+    <div class="w-4/5 p-1 pr-10 mx-auto mt-20 flex justify-between items-center bg-white rounded-2xl shadow-2xl h-full">
+        <div class="flex-1 hidden md:block h-full">
+            <img src="/images/Slogin.png" alt="Sign Up Image" class="ml-1 mr-1 w-full h-full object-cover rounded-lg">
+        </div>
+
+        <div class="flex-1 max-w-md mx-auto ml-6">
+            <h2 class="text-3xl font-semibold text-center text-[#101820FF] mb-6">Login to Your Acccount</h2>
+
+            <form action="/sellers/login" method="POST">
+                <div class="mb-6">
+                    <label for="email" class="block text-lg font-medium text-gray-800">Email Address</label>
+                    <input type="email" id="email" name="email" class="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F2AA4CFF] text-gray-900" placeholder="Enter your email" required>
+                </div>
+
+                <div class="mb-6">
+                    <label for="password" class="block text-lg font-medium text-gray-800">Password</label>
+                    <input type="password" id="password" name="password" class="w-full p-4 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F2AA4CFF] text-gray-900" placeholder="Enter your password" required>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="bg-[#F2AA4CFF] text-white px-8 py-3 rounded-lg w-full mt-4 hover:bg-[#e0953d] transition duration-300 transform hover:scale-105 font-semibold">Login</button>
+                </div>
+            </form>
+
+        <div class="text-center mt-4">
+            <p class="text-gray-600 ">Don't have an account? <a href="/sellers/signup" class="text-[#F2AA4CFF]  font-semibold hover:underline">Sign Up</a></p>
+        </div>
+        
+        </div>
+    </div>
+
+</body>
+</html>
