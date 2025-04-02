@@ -31,3 +31,27 @@
 
 **Seller Edit Product**
 ![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/681bc9e29d330ed43a3ccfa888bd9e61692f6f52/Screenshots/SeditProd.png)
+
+**Buyer Signup**
+![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/dd1a48fe4c7734f6fe1c496bddea78f2cae7f3be/Screenshots/Bsignup.png)
+
+**Buyer Login**
+![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/dd1a48fe4c7734f6fe1c496bddea78f2cae7f3be/Screenshots/Blogin.png)
+
+**Buyer Home**
+![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/dd1a48fe4c7734f6fe1c496bddea78f2cae7f3be/Screenshots/Bdash.png)
+
+**Buyer Product Details**
+![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/dd1a48fe4c7734f6fe1c496bddea78f2cae7f3be/Screenshots/Bprod.png)
+
+**Buyer Profile**
+![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/dd1a48fe4c7734f6fe1c496bddea78f2cae7f3be/Screenshots/Bprofile.png)
+
+**Buyer Edit Profile**
+![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/dd1a48fe4c7734f6fe1c496bddea78f2cae7f3be/Screenshots/BeditProfile.png)
+
+**Buyer Cart**
+![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/dd1a48fe4c7734f6fe1c496bddea78f2cae7f3be/Screenshots/Bcart.png)
+
+**Buyer Wishhlist**
+![Image Not Available](https://github.com/rmkhurana28/RM-SH/blob/dd1a48fe4c7734f6fe1c496bddea78f2cae7f3be/Screenshots/Bwish.png)
