@@ -335,16 +335,56 @@ This project is licensed under the ISC License.
 ## 📸 Screenshots
 
 ### Home Page
-Landing page with animated product showcase and user type selection.
+![Home Page](Screenshots/home.png)
 
-### Buyer Dashboard
-Browse all available products with images, add to cart or wishlist.
+### Seller Features
 
-### Seller Dashboard
-Manage all your listed products, view sales, edit or delete items.
+**Seller Signup**
+![Seller Signup](Screenshots/Ssignup.png)
 
-### Product Management
-Add new products with images, set prices, discounts, and quantities.
+**Seller Login**
+![Seller Login](Screenshots/Slogin.png)
+
+**Seller Dashboard**
+![Seller Dashboard](Screenshots/Sdashboard.png)
+
+**Seller Edit Profile**
+![Seller Edit Profile](Screenshots/SeditProfile.png)
+
+**Add Product**
+![Add Product](Screenshots/SaddProd.png)
+
+**Manage Product**
+![Manage Product](Screenshots/SmanageProd.png)
+
+**Edit Product**
+![Edit Product](Screenshots/SeditProd.png)
+
+### Buyer Features
+
+**Buyer Signup**
+![Buyer Signup](Screenshots/Bsignup.png)
+
+**Buyer Login**
+![Buyer Login](Screenshots/Blogin.png)
+
+**Buyer Home**
+![Buyer Home](Screenshots/Bdash.png)
+
+**Product Details**
+![Product Details](Screenshots/Bprod.png)
+
+**Buyer Profile**
+![Buyer Profile](Screenshots/Bprofile.png)
+
+**Edit Profile**
+![Edit Profile](Screenshots/BeditProfile.png)
+
+**Shopping Cart**
+![Shopping Cart](Screenshots/Bcart.png)
+
+**Wishlist**
+![Wishlist](Screenshots/Bwish.png)
 
 ---
 
