@@ -307,7 +307,7 @@ This project is licensed under the ISC License.
 
 ## 👨‍💻 Developer
 
-**Rahul Khurana**
+**Ridham Khurana**
 - GitHub: [@rmkhurana28](https://github.com/rmkhurana28)
 - Repository: [RM-SH](https://github.com/rmkhurana28/RM-SH)
 
@@ -388,6 +388,6 @@ This project is licensed under the ISC License.
 
 ---
 
-**Made with ❤️ by Rahul Khurana**
+**Made with ❤️ by Ridham Khurana**
 
 *If you find this project helpful, please consider giving it a ⭐ on GitHub!*
