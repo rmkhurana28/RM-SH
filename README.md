@@ -388,6 +388,6 @@ This project is licensed under the ISC License.
 
 ---
 
-**Made by 🂡 Ridham Khurana**
+**Made by ♠️ Ridham Khurana**
 
 *If you find this project helpful, please consider giving it a ⭐ on GitHub!*
